@@ -44,6 +44,13 @@ class MainActivity : ComponentActivity() {
                     ) {
                         Text("Go Box Activity")
                     }
+                    val intent2 = Intent(context,TextCustomizationActivity::class.java)
+
+                    Button(onClick = {
+                        startActivity(context, intent2, null) }
+                    ) {
+                        Text("Go Text customize Activity")
+                    }
 
 
                     Surface(
@@ -107,6 +114,12 @@ fun DefaultPreview() {
                 startActivity(context, intent, null) }
             ) {
                 Text("Go Box Activity")
+            }
+
+            Button(onClick = {
+                startActivity(context, intent, null) }
+            ) {
+                Text("Go Text customize Activity")
             }
 
 
