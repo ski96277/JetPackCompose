@@ -52,6 +52,14 @@ class MainActivity : ComponentActivity() {
                         Text("Go Text customize Activity")
                     }
 
+                    val cardIntent = Intent(context,CardAnimationActivity::class.java)
+
+                    Button(onClick = {
+                        startActivity(context, cardIntent, null) }
+                    ) {
+                        Text("Go card animation Activity")
+                    }
+
 
                     Surface(
                         modifier = Modifier
@@ -96,7 +104,7 @@ fun RowScope.RowItem(weight: Float,color: Color=Color.Gray){
 @Composable
 
 fun DefaultPreview() {
-    JetPackComposeTheme {
+    JetPackComposeTheme (darkTheme = false){
         Column(
             modifier = Modifier
                 .fillMaxSize(),
@@ -115,11 +123,20 @@ fun DefaultPreview() {
             ) {
                 Text("Go Box Activity")
             }
+            val intent2 = Intent(context,TextCustomizationActivity::class.java)
 
             Button(onClick = {
-                startActivity(context, intent, null) }
+                startActivity(context, intent2, null) }
             ) {
                 Text("Go Text customize Activity")
+            }
+
+            val cardIntent = Intent(context,CardAnimationActivity::class.java)
+
+            Button(onClick = {
+                startActivity(context, cardIntent, null) }
+            ) {
+                Text("Go card animation Activity")
             }
 
 

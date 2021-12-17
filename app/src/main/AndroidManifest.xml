@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetPackCompose">
         <activity
+            android:name=".CardAnimationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_card_animation"
+            android:theme="@style/Theme.JetPackCompose.NoActionBar" />
+        <activity
             android:name=".TextCustomizationActivity"
             android:exported="false"
             android:label="@string/title_activity_text_customization"
